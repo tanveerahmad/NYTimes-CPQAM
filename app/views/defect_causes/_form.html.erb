@@ -1,0 +1,26 @@
+<%= form_for @defect_cause, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :defect_cause, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :defect_cause, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :points, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :points, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :score_criterium_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :score_criterium_id,ScoreCriterium.all.collect{|score_criteria| [score_criteria.score_criteria,score_criteria.id]}.prepend(["Select score criteria", -1]),{} %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                defect_causes_path, :class => 'btn' %>
+  </div>
+<% end %>

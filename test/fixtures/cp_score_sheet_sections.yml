@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  score_sheet_config_id: 1
+  section_name: 
+  color_page: MyString
+
+two:
+  score_sheet_config_id: 1
+  section_name: 
+  color_page: MyString

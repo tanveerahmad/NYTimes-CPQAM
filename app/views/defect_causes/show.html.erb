@@ -1,0 +1,25 @@
+<%- model_class = DefectCause -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:defect_cause) %>:</strong></dt>
+  <dd><%= @defect_cause.defect_cause %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:points) %>:</strong></dt>
+  <dd><%= @defect_cause.points %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:score_criterium_id) %>:</strong></dt>
+  <dd><%= @defect_cause.score_criterium.score_criteria %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              defect_causes_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_defect_cause_path(@defect_cause), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              defect_cause_path(@defect_cause),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

@@ -1,0 +1,27 @@
+<h1>Listing cp_score_sheet_sections</h1>
+
+<table>
+  <tr>
+    <th>Score sheet config</th>
+    <th>Section name</th>
+    <th>Color page</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cp_score_sheet_sections.each do |cp_score_sheet_section| %>
+  <tr>
+    <td><%= cp_score_sheet_section.score_sheet_config_id %></td>
+    <td><%= cp_score_sheet_section.section_name %></td>
+    <td><%= cp_score_sheet_section.color_page %></td>
+    <td><%= link_to 'Show', cp_score_sheet_section %></td>
+    <td><%= link_to 'Edit', edit_cp_score_sheet_section_path(cp_score_sheet_section) %></td>
+    <td><%= link_to 'Destroy', cp_score_sheet_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cp score sheet section', new_cp_score_sheet_section_path %>

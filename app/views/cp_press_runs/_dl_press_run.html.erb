@@ -1,0 +1,6 @@
+<div class="control-group">
+  <%= f.label :product_id, :class => 'control-label' %>
+  <div class="controls">
+    <%= f.select :product_id, Product.all.collect{|product| [product.product_name,product.id] }.prepend(["Select product",-1]), {} %>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<table>
+  <thead>
+  <tr>
+    <th>Section</th>
+    <th>
+      <%= f.label :section_name %>
+    </th>
+    <th>
+      <%= f.label :total_page %>
+    </th>
+    <th>
+      <%= f.label :color_page %>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      Section 1
+    </td>
+    <td>
+      <%= f.select :section_name, ('A'..'H').collect{|section| [section,section]} %>
+    </td>
+    <td>
+      <%= f.text_field :total_page %>
+    </td>
+    <td>
+      <%= f.text_field :color_page %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  page_type_id: 1
+  score_criteria_id: 1
+  score: 1
+
+two:
+  page_type_id: 1
+  score_criteria_id: 1
+  score: 1

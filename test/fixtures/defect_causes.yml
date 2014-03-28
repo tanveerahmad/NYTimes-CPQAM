@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  defect_cause: MyString
+  points: 9.99
+  score_criterium_id: 1
+
+two:
+  defect_cause: MyString
+  points: 9.99
+  score_criterium_id: 1

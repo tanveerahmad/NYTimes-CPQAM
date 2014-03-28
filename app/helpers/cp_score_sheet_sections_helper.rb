@@ -1,0 +1,2 @@
+module CpScoreSheetSectionsHelper
+end

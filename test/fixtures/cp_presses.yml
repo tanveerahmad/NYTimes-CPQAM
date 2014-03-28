@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  press_name: MyString
+  description: MyText
+  timezone_id: 1
+  active: false
+
+two:
+  press_name: MyString
+  description: MyText
+  timezone_id: 1
+  active: false

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  issue_date: 2014-03-11 17:18:43
+  press_id: 1
+  product_id: 1
+  press_run_id: 1
+  foreman_id: 1
+  pic_id: 1
+  total_section: 1
+  color_page_rated: 1
+  bw_page_rated: 1
+
+two:
+  issue_date: 2014-03-11 17:18:43
+  press_id: 1
+  product_id: 1
+  press_run_id: 1
+  foreman_id: 1
+  pic_id: 1
+  total_section: 1
+  color_page_rated: 1
+  bw_page_rated: 1

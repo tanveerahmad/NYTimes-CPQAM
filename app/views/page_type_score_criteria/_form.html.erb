@@ -1,0 +1,26 @@
+<%= form_for @page_type_score_criterium, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :page_type_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :page_type_id, PageType.all.collect{|page_type|[page_type.page_type,page_type.id]}.prepend(["Select page type",-1]),{}%>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :score_criteriam, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :score_criterium_id, ScoreCriterium.all.collect{|score_criteria| [score_criteria.score_criteria,score_criteria.id]}.prepend(["Select score criteria", -1]),{}%>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :score, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :score, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                page_type_score_criteria_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,50 @@
+<%= form_for @cp_score_sheet_config, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :press_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :press_id, CpPress.all.collect{|press|[press.press_name, press.id]}.prepend(["select press",-1]),{} %>
+    </div>
+  </div>
+<div class="control-group">
+      <%= f.label :issue_date, :class => 'control-label' %>
+      <div class="controls">
+      <%= f.label :issue_date, :class => 'control-label' %>
+  </div>
+</div>
+  <div class="control-group">
+    <%= f.label :press_run_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :press_run_id, CpPressRun.all.collect{|press_run|[press_run.cprun_name,press_run.id]}.prepend(['Select press run',-1]),{} %>
+    </div>
+  </div>
+    <div class="control-group">
+      <%= f.label :total_section, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.select :total_section, (1..10).collect{|num| [num,num]} %>
+      </div>
+    </div>
+    <div>
+      <%= f.fields_for :cp_score_sheet_sections do |builder| %>
+        <%= render :partial => 'cp_score_sheet_sections', :locals => {:f => builder} %>
+      <% end %>
+
+    </div>
+  <div class="control-group">
+    <%= f.label :foreman_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :foreman_id, CpForeman.all.collect{|foreman|[foreman.full_name,foreman.id]}.prepend(['Select foreman', -1]),{} %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pic_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :pic_id, Cppic.all.collect{|pic|[pic.full_name,pic.id]}.prepend(['Select pic', -1]),{} %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                cp_score_sheet_configs_path, :class => 'btn' %>
+  </div>
+<% end %>
